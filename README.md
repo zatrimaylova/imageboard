@@ -1,1 +1,1 @@
-# imageboard
+# picture-board
