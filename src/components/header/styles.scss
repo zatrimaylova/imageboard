@@ -1,0 +1,51 @@
+#--header {
+  padding: 30px 60px;
+  
+  > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .search-tab {
+      display: flex;
+      gap: 42px;
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  #--header {
+    padding: 20px 40px;
+  
+    > div {
+      .search-tab {
+        gap: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #--header {
+    padding: 20px;
+  
+    > div {
+      .search-tab {
+        gap: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #--header {
+    padding: 20px 10px;
+  
+    > div {
+      .search-tab {
+        gap: 8px;
+      }
+    }
+  }
+}

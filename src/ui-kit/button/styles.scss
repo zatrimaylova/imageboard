@@ -1,0 +1,17 @@
+@import '../../styles/colors.scss';
+
+.button {
+  height: 46px;
+  width: 46px;
+  border-radius: 46px;
+
+  > button {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 46px;
+    cursor: pointer;
+    background-color: map-get($color_main, '_a');
+  }
+}
