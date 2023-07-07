@@ -13,5 +13,9 @@
     border-radius: 46px;
     cursor: pointer;
     background-color: map-get($color_main, '_a');
+
+    svg {
+      margin-top: 2px;
+    }
   }
 }

@@ -1,0 +1,90 @@
+.modal-details {
+  .view-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+
+  .modal-details-picture {
+    width: 50vw;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+  }
+
+  aside {
+    width: 30vw;
+
+    h2 {
+      text-decoration: underline;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    > div > div {
+      display: flex;
+      gap: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .modal-details{
+    .view-details {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 40px;
+      //justify-content: flex-end;
+      padding: 0 40px 40px;
+    }
+
+    .modal-details-picture {
+      width: 100%;
+    }
+
+    aside {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .modal-details{
+    .view-details {
+      gap: 20px;
+      padding: 0 20px;
+      margin-top: 20px;
+    }
+
+    .modal-details-picture {
+      height: 50vh;
+    }
+
+    aside {
+      width: 100%;
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

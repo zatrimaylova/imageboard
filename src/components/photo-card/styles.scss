@@ -36,5 +36,17 @@
     flex-direction: column;
     gap: 26px;
     text-align: center;
+
+    .more {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+
+@media screen and (max-width: 627px) {
+  .figure {
+    width: 100%;
   }
 }
