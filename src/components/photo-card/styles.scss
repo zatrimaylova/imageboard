@@ -37,6 +37,16 @@
     gap: 26px;
     text-align: center;
 
+    .text {
+      height: 30px;
+
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
     .more {
       text-decoration: underline;
       cursor: pointer;

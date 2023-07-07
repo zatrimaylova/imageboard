@@ -2,25 +2,43 @@
  * @prettier
  */
 
-import React from 'react';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { clearCategories } from '../../store/categories/categoriesSlice';
 
 import './styles.scss';
 
-import { Input, Button } from '../../ui-kit';
+import { Button } from '../../ui-kit';
+import { Modals } from '..';
 
 const Header = () => {
+  const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
+
+  const categories = useSelector((state) => state.categoriesSlice);
+  const dispatch = useDispatch();
+
+  const showModal = () => {
+    setIsFilterModalVisible(!isFilterModalVisible);
+  };
+
+  const clearFilters = () => dispatch(clearCategories());
+
   return (
-    <header id="--header">
-      <div>
+    <>
+      <header id="--header">
         <div>
-          <span>Picture-board</span>
+          <div className="logo-title">
+            <span>Picture-board</span>
+          </div>
+          <div className="filters-tab">
+            {categories.length > 0 && <Button label="Clear filters" onClick={clearFilters} />}
+            <Button icon="filter" onClick={showModal} />
+          </div>
         </div>
-        <div className="search-tab">
-          <Input />
-          <Button icon="filter" />
-        </div>
-      </div>
-    </header>
+      </header>
+      <Modals.FilterPictures open={isFilterModalVisible} close={showModal} />
+    </>
   );
 };
 

@@ -17,7 +17,7 @@ const Modal = (props) => {
         {props.title && (
           <div className="modal-header">
             <h2>{props.title ? props.title : ''}</h2>
-            {props.close && <Button onClick={props.onClose} icon="cross" />}
+            {props.onClose && <Button onClick={props.onClose} icon="cross" />}
           </div>
         )}
         <>{props.children}</>
