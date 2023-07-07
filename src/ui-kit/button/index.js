@@ -12,7 +12,10 @@ import { Icon } from '../';
 
 const Button = (props) => {
   return (
-    <div className="button" onClick={props.onClick}>
+    <div
+      className={`button ${props.icon && !props.label ? 'clear' : 'label'}`}
+      onClick={props.onClick}
+    >
       <button type="button">
         {props.label && <span>{props.label}</span>}
         {props.icon && (

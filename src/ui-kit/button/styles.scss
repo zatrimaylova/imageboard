@@ -2,8 +2,23 @@
 
 .button {
   height: 46px;
-  width: 46px;
   border-radius: 46px;
+
+  &.clear {
+    width: 46px;
+  }
+
+  &.label {
+    span {
+      padding: 0 20px;
+      font-family: 'Baloo 2', cursive;
+      color: map-get($color_white, '_a');
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
 
   > button {
     height: 100%;
