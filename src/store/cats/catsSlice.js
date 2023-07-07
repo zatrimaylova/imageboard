@@ -13,8 +13,9 @@ const catsSlice = createSlice({
   initialState,
   reducers: {
     setCatsData: (state, action) => (state = action.payload),
+    deleteCat: (state, action) => (state = state.filter((item) => item.id !== action.payload)),
   },
 });
 
-export const { setCatsData } = catsSlice.actions;
+export const { setCatsData, deleteCat } = catsSlice.actions;
 export default catsSlice.reducer;
