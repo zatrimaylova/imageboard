@@ -17,7 +17,7 @@ const Header = () => {
         </div>
         <div className="search-tab">
           <Input />
-          <Button />
+          <Button icon="filter" />
         </div>
       </div>
     </header>

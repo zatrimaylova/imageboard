@@ -1,0 +1,13 @@
+.modal-root {
+  .modal-header{
+    height: 88px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+
+    h2 {
+      line-height: 44px;
+    }
+  }
+}

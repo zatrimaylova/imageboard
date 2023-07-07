@@ -23,7 +23,7 @@ const PhotoCard = (props) => {
         style={props?.path ? { backgroundImage: `url(${props?.path})` } : null}
         className="figure"
         onClick={manageDescription}
-        onMouseLeave={manageDescription}
+        onMouseLeave={() => setIsDescriptionVisible(false)}
       >
         <div className="transparent">
           <div className="close-section" id={props.id}>
@@ -40,6 +40,9 @@ const PhotoCard = (props) => {
               <div className="details">
                 <h3>{props.name}</h3>
                 <p>{props.description}</p>
+                <p className="more" onClick={() => props.setOpenModal(props.id)}>
+                  more...
+                </p>
               </div>
             )}
             <div></div>
@@ -59,12 +62,14 @@ PhotoCard.propTypes = {
   path: PropTypes.string,
   id: PropTypes.string,
   delete: PropTypes.func,
+  setOpenModal: PropTypes.func,
 };
 
 PhotoCard.defaultProps = {
   path: '',
   id: '',
   delete: () => {},
+  setOpenModal: () => {},
 };
 
 export default PhotoCard;
