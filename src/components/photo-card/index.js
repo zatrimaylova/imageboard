@@ -32,7 +32,7 @@ const PhotoCard = (props) => {
               className="delete-button"
               id={props.path}
               type="button"
-              onClick={props.delete}
+              onClick={() => props.delete(props.id)}
             >
               <Icon name="cross" width="24px" height="24px" fill={colors.color_main._a} />
             </button>

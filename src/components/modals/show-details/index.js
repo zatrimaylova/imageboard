@@ -45,19 +45,12 @@ const ShowDetails = (props) => {
 
 ShowDetails.propTypes = {
   open: PropTypes.bool,
-  onClose: PropTypes.func,
-  onCreate: PropTypes.func,
-  creationLoading: PropTypes.bool,
-  onChange: PropTypes.func,
-  disabled: PropTypes.bool,
+  close: PropTypes.func,
 };
+
 ShowDetails.defaultProps = {
   open: false,
-  onClose: () => {},
-  onCreate: () => {},
-  creationLoading: false,
-  onChange: () => {},
-  disabled: false,
+  close: () => {},
 };
 
 export default ShowDetails;
