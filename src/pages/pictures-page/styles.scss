@@ -1,0 +1,25 @@
+#--pictures-page {
+  .viewing {
+    padding: 40px 60px;
+    display: flex;
+		flex-wrap: wrap;
+	  gap: 26px 26px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 627px) {
+  #--pictures-page {
+    .viewing {
+      padding: 20px 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #--pictures-page {
+    .viewing {
+      padding: 10px 20px 20px;
+    }
+  }
+}
